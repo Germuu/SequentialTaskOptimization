@@ -16,6 +16,7 @@ tensorflow = "^2.18.0"
 scikit-learn = "^1.6.1"
 seaborn = "^0.13.2"
 pulp = "^2.9.0"
+torch = "^2.5.1"
 
 
 [tool.poetry.group.dev.dependencies]

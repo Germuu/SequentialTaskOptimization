@@ -31,7 +31,7 @@ class CarWash:
         current = self.current_throughput()
         optimized = self.optimized_throughput()
         # Calculate optimization potential as the percentage increase in throughput
-        potential = (optimized - current) / current
+        potential = (optimized-current) / current
         return potential   
 
 
@@ -45,11 +45,8 @@ class Worker:
 
 # Example dataset of workers
 workers = [
-    Worker(10, 4 ,2), 
-    Worker(6, 4, 2),  
-    Worker(8, 4 , 4), 
-    Worker(12, 5, 3), 
-
+    Worker(8, 1, 1), 
+    Worker(1, 2, 8)  
 ]
 
 # Initialize car wash
