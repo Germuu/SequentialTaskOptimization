@@ -44,58 +44,58 @@ We propose a new approach that maximizes car wash throughput by dividing workers
 We have developed a mathematical model to calculate the number of cars washed per hour, both for the current method (individual work) and the proposed method (task specialization).
 
 Let:
-- \( T_v \) = Average vacuuming time per car (in minutes)
-- \( T_w \) = Average wiping time per car (in minutes)
-- \( p \) = Probability of needing pressure washing
-- \( T_p \) = Average pressure washing time per car (in minutes)
-- \( N \) = Number of workers
+- $T_v$ = Average vacuuming time per car (in minutes)
+- $T_w$ = Average wiping time per car (in minutes)
+- $p$ = Probability of needing pressure washing
+- $T_p$ = Average pressure washing time per car (in minutes)
+- $N$ = Number of workers
 
 ### Current Method: Individual Work
 In the current method, each worker completes the entire process on their own. The throughput (cars washed per hour) is given by:
 
-\[
+$$
 \text{Cars per hour (current)} = \frac{60}{T_v + T_w + p \times T_p} \times N
-\]
+$$
 
 ### Proposed Method: Task Specialization
 In the proposed method, workers are divided into teams, with the fastest vacuumers focusing on vacuuming and others handling wiping and pressure washing. The throughput is calculated as:
 
-\[
+$$
 \text{Cars per hour (proposed)} = \frac{60}{T_j} \times \frac{N}{2}
-\]
-where \( T_j \) is the vacuuming time of the fastest vacuumers.
+$$
+where $T_j$ is the vacuuming time of the fastest vacuumers.
 
 ---
 
 ## Deriving the Efficiency Condition
 The proposed method is considered more efficient if it results in a higher throughput than the current method. Therefore, we set up the following inequality:
 
-\[
+$$
 \frac{60}{T_j} \times \frac{N}{2} > \frac{60}{T_v + T_w + p \times T_p} \times N
-\]
+$$
 
 ### Step 1: Simplify the Inequality
-We can cancel \( 60 \) and \( N \) from both sides, giving:
+We can cancel $60$ and $N$ from both sides, giving:
 
-\[
+$$
 \frac{1}{T_j} > \frac{2}{T_v + T_w + p \times T_p}
-\]
+$$
 
-### Step 2: Rearrange to Solve for \( T_j \)
-Multiplying both sides by \( T_j \) and the combined time \( (T_v + T_w + p \times T_p) \), we get:
+### Step 2: Rearrange to Solve for $T_j$
+Multiplying both sides by $T_j$ and the combined time $(T_v + T_w + p \times T_p)$, we get:
 
-\[
+$$
 T_j < \frac{T_v + T_w + p \times T_p}{2}
-\]
+$$
 
-This inequality shows that for the proposed method to be more efficient, the vacuuming time of the fastest vacuumers \( T_j \) must be less than half of the total average time for vacuuming, wiping, and the weighted pressure washing time. In other words, \( T_j \) should be small enough to reduce the bottleneck effect in vacuuming and allow wiping or pressure washing to become the limiting factor.
+This inequality shows that for the proposed method to be more efficient, the vacuuming time of the fastest vacuumers $T_j$ must be less than half of the total average time for vacuuming, wiping, and the weighted pressure washing time. In other words, $T_j$ should be small enough to reduce the bottleneck effect in vacuuming and allow wiping or pressure washing to become the limiting factor.
 
 ---
 
 ## Results
 Through our analysis, we find that the proposed method can increase throughput by up to **33%** under ideal conditions. This increase is achieved by better utilizing the strengths of each worker and reducing bottlenecks that typically slow down the process.
 
-The efficiency increase is most noticeable when vacuuming time (\( T_j \)) is optimized. However, once \( T_j \) becomes very small (i.e., faster than the combined time for wiping and pressure washing), the throughput stabilizes due to the bottleneck created by the latter tasks.
+The efficiency increase is most noticeable when vacuuming time ($T_j$) is optimized. However, once $T_j$ becomes very small (i.e., faster than the combined time for wiping and pressure washing), the throughput stabilizes due to the bottleneck created by the latter tasks.
 
 ---
 
@@ -105,5 +105,3 @@ By introducing task specialization and focusing on balancing bottlenecks, our op
 We encourage car wash businesses to consider adopting this optimized model to stay ahead of the competition and maximize their operational performance.
 
 ---
-
-
